@@ -1,0 +1,2 @@
+rootProject.name='SPOT'
+include ':app'
