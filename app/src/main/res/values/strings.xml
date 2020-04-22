@@ -4,4 +4,5 @@
     <string name="todo">TODO</string>
     <string name="spot">SPOT™</string>
     <string name="loginscreen">LoginScreen</string>
+    <string name="hello">Hello</string>
 </resources>
