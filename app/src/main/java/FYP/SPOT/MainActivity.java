@@ -2,6 +2,7 @@ package FYP.SPOT;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.Manifest;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,6 +14,14 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.MultiplePermissionsReport;
+import com.karumi.dexter.PermissionToken;
+import com.karumi.dexter.listener.DexterError;
+import com.karumi.dexter.listener.PermissionRequest;
+import com.karumi.dexter.listener.PermissionRequestErrorListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+
 
 import org.alicebot.ab.AIMLProcessor;
 import org.alicebot.ab.Bot;
@@ -26,6 +35,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.List;
 
 import FYP.SPOT.Adapter.ChatmessageAdapter;
 import FYP.SPOT.Model.ChatMessage;
@@ -72,6 +82,40 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Dexter.withContext(getApplicationContext())
+                .withPermissions(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE)
+                .withListener(new MultiplePermissionsListener() {
+            @Override
+            public void onPermissionsChecked(MultiplePermissionsReport multiplePermissionsReport) {
+                if (multiplePermissionsReport.areAllPermissionsGranted()) {
+                    custom();
+                    Toast.makeText(MainActivity.this, "Permission Granted..!", Toast.LENGTH_SHORT).show();
+                }
+                if (multiplePermissionsReport.isAnyPermissionPermanentlyDenied()) {
+                    Toast.makeText(MainActivity.this, "Please Grant all the Premissions!!", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onPermissionRationaleShouldBeShown(List<PermissionRequest> list, PermissionToken permissionToken) {
+                permissionToken.continuePermissionRequest();
+            }
+        }).withErrorListener(new PermissionRequestErrorListener() {
+            @Override
+            public void onError(DexterError dexterError) {
+                Toast.makeText(MainActivity.this, ""+dexterError, Toast.LENGTH_SHORT).show();
+            }
+        }).onSameThread().check();
+
+        // get the working directory
+        MagicStrings.root_path = Environment.getExternalStorageDirectory().toString() + "/TBC";
+        AIMLProcessor.extension = new PCAIMLProcessorExtension();
+
+        bot = new Bot("TBC", MagicStrings.root_path, "chat");
+        chat = new Chat(bot);
+    }
+
+    private void custom() {
         boolean available = isSDCartAvailable();
 
         AssetManager assets = getResources().getAssets();
@@ -79,6 +123,7 @@ public class MainActivity extends AppCompatActivity {
 
         boolean makeFile = fileName.mkdirs();
 
+        // read the aiml file
         if (fileName.exists()){
             try{
                 for(String dir: assets.list("TBC")){
@@ -96,6 +141,7 @@ public class MainActivity extends AppCompatActivity {
                         in = assets.open("TBC/" + dir + "/" + file);
                         out = new FileOutputStream(fileName.getPath() + "/" + dir + "/" +file);
 
+                        //copy files from assets to the mobile phone's SD card or any secondary storage
                         copyFile(in,out);
                         in.close();
                         out.flush();
@@ -106,13 +152,9 @@ public class MainActivity extends AppCompatActivity {
                 e.getStackTrace();
             }
         }
-        MagicStrings.root_path = Environment.getExternalStorageDirectory().toString() + "/TBC";
-        AIMLProcessor.extension = new PCAIMLProcessorExtension();
-
-        bot = new Bot("TBC", MagicStrings.root_path, "chat");
-        chat = new Chat(bot);
     }
 
+    //copy the files
     private void copyFile(InputStream in, OutputStream out) throws IOException {
         byte[] buffer = new byte [1024];
         int read;
