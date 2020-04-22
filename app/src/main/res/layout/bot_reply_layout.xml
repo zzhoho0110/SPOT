@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         app:cmv_arrowGravity="start"
         app:cmv_arrowMargin="3dp"
-        app:cmv_arrowPosition="right"
-        app:cmv_backgroundColor="#88BABABA"
-        app:cmv_backgroundColorPressed="#FFBABABA"
+        app:cmv_arrowPosition="left"
+        app:cmv_backgroundColor="#8800BCD4"
+        app:cmv_backgroundColorPressed="#FF00BCD4"
         app:cmv_contentPadding="10dp"
         app:cmv_cornerRadius="3dp"
         app:cmv_showArrow="true">
@@ -24,9 +24,8 @@
             android:id="@+id/text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
+            android:text="Hello There"
             style="@style/TextAppearance.AppCompat.Body1"/>
-
     </me.himanshusoni.chatmessageview.ChatMessageView>
 
 
