@@ -9,7 +9,7 @@
 
     <me.himanshusoni.chatmessageview.ChatMessageView
         android:id="@+id/chatMessageView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cmv_arrowGravity="start"
         app:cmv_arrowMargin="3dp"
@@ -22,10 +22,10 @@
 
         <TextView
             android:id="@+id/text"
+            style="@style/TextAppearance.AppCompat.Body1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            style="@style/TextAppearance.AppCompat.Body1"/>
+            android:text="Hello" />
 
     </me.himanshusoni.chatmessageview.ChatMessageView>
 

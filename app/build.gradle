@@ -32,7 +32,6 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation files('libs/Ab.jar')
-
-    implementation 'com.android.support:design:28.0.0'
-    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.3'
+    implementation 'com.google.android.material:material:1.1.0'
+    implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.6'
 }
