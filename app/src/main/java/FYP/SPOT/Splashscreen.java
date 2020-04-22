@@ -22,7 +22,7 @@ public class Splashscreen extends AppCompatActivity {
 
 
         getSupportActionBar().hide();
-        videoView = (VideoView)findViewById(R.id.videoView);
+        videoView = findViewById(R.id.videoView);
         Uri video = Uri.parse("android.resource://" + getPackageName() +"/" + R.raw.splash);
         videoView.setVideoURI(video);
         videoView.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    <category>
+        <pattern>What is "FM"?</pattern>
+        <template>FM is a short term of Freshmen, means a student in the first year of college.</template>
+    </category>
+    <category>
+        <pattern>When will the schedule swap exercise hold?</pattern>
+        <template>It depands, last year was 3 Sep 4:30 pm. Please check Learner Portal for the latest info.</template>
+    </category>
+    <category>
+        <pattern>Where is Dominic’s temple?</pattern>
+        <template>The college staff room is located at 12-13 Floor of KEC Center.</template>
+    </category>
+    <category>
+        <pattern>Where can I find Dominic Cheng?</pattern>
+        <template>The college staff room is located at 12-13 Floor of KEC Center.</template>
+    </category>
+    <category>
+        <pattern>When can I swap my timetable?</pattern>
+        <template>Usually will be the first week of new semester.Please check Learner Portal for the latest info.</template>
+    </category>
+    <category>
+        <pattern>How many lessons I can have within a day?</pattern>
+        <template>The school didn't state it but no more than 3 consecutive lessons should be fine.</template>
+    </category>
+    <category>
+        <pattern>Where can I insert LAN at the college?</pattern>
+        <template>We can find a few in common room at 3/F, but the college have provided WiFi for all student who studies in HKUSpace.</template>
+    </category>
+    <category>
+        <pattern>What is the Student representative for?</pattern>
+        <template>
+1. To attend the HD Class Representative Meeting twice a year.
+2. To act as a bridge between the College and the fellow classmates by collecting comments from and
+conveying messages to the classmates as well as reflecting their opinions to the College in relation
+to teaching, learning and support services.
+3. The term of service is one academic year, i.e. academic year 2019/20. </template>
+    </category>
+    <category>
+        <pattern>How to apply for Student Representative?</pattern>
+        <template>Student have to fill in a form and submit it to the college office. Notice that there will be only one representative per course.</template>
+    </category>
+    <category>
+        <pattern>The add-drop period starts from when?</pattern>
+        <template>Please check Learner Portal for the latest info.</template>
+    </category>
+    <category>
+        <pattern>Do I need a laptop with tons of storage?</pattern>
+        <template>It depends on personal needs.</template>
+    </category>
+    <category>
+        <pattern>May I ask is there any class on Sunday?</pattern>
+        <template>Nope. Classes will only held on Mon to Sat.</template>
+    </category>
+    <category>
+        <pattern>Do we need to come back to school before 9/9?</pattern>
+        <template>Please check the school calendar.</template>
+    </category>
+    <category>
+        <pattern>Do we have Saturday class for every student?</pattern>
+        <template>For some courses, lectures will only held on Saturday. For most of the courses you can swap on our system. </template>
+    </category>
+    <category>
+        <pattern>Where to view my timetable tomorrow?</pattern>
+        <template>We can check our timetable on the Score system.</template>
+    </category>
+    <category>
+        <pattern>Is that normal that I can't check my time table now?</pattern>
+        <template>Please refer to the lastest notice form school.</template>
+    </category>
+    <category>
+        <pattern>Is it easier to successfully swap my class when I do it earlier?</pattern>
+        <template>Each course have a limited quota. The anser is Yessssss.</template>
+    </category>
+    <category>
+        <pattern>Can I start swap class at 9/9 midnight?</pattern>
+        <template>The time of swapping class will start at morning, usually will be 8:30 am.</template>
+    </category>
+    <category>
+        <pattern>Is there any class we can swap?</pattern>
+        <template>All lesson can be swap unless that is one class only.</template>
+    </category>
+    <category>
+        <pattern>Using a computer to enter the swap platform?</pattern>
+        <template>Yes smartphone also can do.</template>
+    </category>
+    <category>
+        <pattern>Is there any limitation of swapping class?</pattern>
+        <template>15 times of adjustment court for each course</template>
+    </category>
+    <category>
+        <pattern>Is that means there need to have enough quota if we want to swap our class successfully？</pattern>
+        <template>Yes, every classroom will have their limition of seats.</template>
+    </category>
+    <category>
+        <pattern>What is myFuture for?</pattern>
+        <template>In this website we can apply for Reference Letter to support my University Application, apply for College Principal's Recommendation Scheme (HKU), report your University Offer and Interview Experience, course/Class Add/Drop/Swap Exercise, apply for Transcript(s) and Payment Online, destination Survey and Graduation Ceremony Registration, withdraw study from the College
+.</template>
+    </category>
+    <category>
+        <pattern>What is SCORE for ?</pattern>
+        <template>In this website you can download unofficial transcript and check your timetable..</template>
+    </category>
+    <category>
+        <pattern>Do I have Office 365 subscription?</pattern>
+        <template>All student will have Office 365 subscription during your study period.</template>
+    </category>
+    <category>
+        <pattern>Is Johnny sir a good teacher？</pattern>
+        <template>For students who studied networking course, they clamed that Johnny is a straight lecturer who offering knowledge of networking stuff. As soon as we follows his rules.</template>
+    </category>
+    <category>
+        <pattern>Anything we need to bring at the first lesson?</pattern>
+        <template>A pen, notebook and a well prepared brain.</template>
+    </category>
+    <category>
+        <pattern>Do we need to print our own notes?</pattern>
+        <template>Uauslly teacher will prepared a powerpoint file for us on soul, some lecture may even print it out to us.</template>
+    </category>
+    <category>
+        <pattern>Where can i get a locker? </pattern>
+        <template>You can go to Myfuture to registration a locker</template>
+    </category>
+    <category>
+        <pattern>Do we need to bring a laptop to the first lesson?</pattern>
+        <template>You can bring it if you really need to type ur own notes.</template>
+    </category>
+    <category>
+        <pattern>Where will you go at the free time between classes?</pattern>
+        <template>Go for a lunch or coffee and sit at 3/F common room</template>
+    </category>
+    <category>
+        <pattern>The first week won't count attendance?</pattern>
+        <template>Yes. During the add drop period, attendance will not be counted. But the lecturer will still teach their class and notes. It is better to attend lectures on time If you do not want to miss anything.</template>
+    </category>
+    <category>
+        <pattern>CIT centre is also located in Kowloonbay?</pattern>
+        <template>Yes.It is located in 63 Tai Yip Street, Kowloon Bay, Kowloon (Exit A, Kowloon Bay MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Where is IEC?</pattern>
+        <template>Island East Campus is located in 494 King’s Road, North Point, Hong Kong (Exit B3, North Point MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Where is CIT?</pattern>
+        <template>CITA Learning Centre is located in 63 Tai Yip Street, Kowloon Bay, Kowloon (Exit A, Kowloon Bay MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Where is HPSHCC?</pattern>
+        <template>HKU SPACE Po Leung Kuk Stanley Ho Community College (HPSHCC) Campus is located in 66 Leighton Road, Causeway Bay, Hong Kong</template>
+    </category>
+    <category>
+        <pattern>Where is ULC?</pattern>
+        <template>United Learning Centre is located in 6/F & 34/F, United Centre, 95 Queensway, Hong Kong (Exit D, Admiralty MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Where is ALC?</pattern>
+        <template>Admiralty Learning Centre is located in 2/F & 3/F, Admiralty Centre, 18 Harcourt Road, Hong Kong (access via the shopping arcade escalators through Exit A, Admiralty MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Where is CLC?</pattern>
+        <template>Cyberport Learning Centre is located in Level 5, Cyberport 1, 100 Cyberport Road, Hong Kong</template>
+    </category>
+    <category>
+        <pattern>Where is GHLC?</pattern>
+        <template>Graduate House Learning Centre is located in Level P6 (Room P601 & P602), Graduate House, No. 3 University Drive, The University of Hong Kong, Hong Kong (Exit A2, HKU MTR Station)</template>
+    </category>
+    <category>
+        <pattern>Do we need facility card to enter library?</pattern>
+        <template>Yes, we can't enter library just using student card.</template>
+    </category>
+    <category>
+        <pattern>Is there any native speaker teaching english course?</pattern>
+        <template>Yes, there are some teacher like Mark, Daivd etc.</template>
+    </category>
+    <category>
+        <pattern>Why the 3 hours class is shown as 120 mins on swap platform?</pattern>
+        <template>It's a 120 mins class plus 10 mins for you to switch classroom.</template>
+    </category>
+    <category>
+        <pattern>Is there any power socket to charge my notebook?</pattern>
+        <template>Yes, they are all around the campus. You may find them in 3/F common room or other normal classroom.</template>
+    </category>
+    <category>
+        <pattern>Can we smoke or drink in campus?</pattern>
+        <template>We better do it outside the school after the lesson, smoke in campus area is prohibited.</template>
+    </category>
+
+</aiml>
