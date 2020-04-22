@@ -34,4 +34,5 @@ dependencies {
     implementation files('libs/Ab.jar')
     implementation 'com.google.android.material:material:1.1.0'
     implementation 'me.himanshusoni.chatmessageview:chat-message-view:1.0.6'
+    implementation 'com.karumi:dexter:6.1.0'
 }
