@@ -3,7 +3,9 @@ package FYP.SPOT;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.res.AssetManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.text.TextUtils;
@@ -47,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton btnSend;
     EditText edtTextMag;
     ImageView imageView;
-
+    View view;
     private Bot bot;
     public static Chat chat;
     private ChatmessageAdapter adapter;
@@ -61,7 +63,8 @@ public class MainActivity extends AppCompatActivity {
         btnSend = findViewById(R.id.btnSend);
         edtTextMag = findViewById(R.id.edtTextMsg);
         imageView = findViewById(R.id.imageView);
-
+        view = this.getWindow().getDecorView();
+        view.setBackgroundResource(R.color.white);
         adapter = new ChatmessageAdapter(this,new ArrayList<ChatMessage>());
         listView.setAdapter(adapter);
 
@@ -176,4 +179,22 @@ public class MainActivity extends AppCompatActivity {
         ChatMessage chatMessage = new ChatMessage(false, true, message);
         adapter.add(chatMessage);
     }
+
+    public void onClick(View view) {
+        Intent intent = new Intent();
+        intent.setAction(Intent.ACTION_VIEW);
+        intent.addCategory(Intent.CATEGORY_BROWSABLE);
+        intent.setData(Uri.parse("https://www.score.hku.hk/psp/csprd/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_LIST.GBL?PORTALPARAM_PTCNAV=HC_SSR_SSENRL_LIST&EOPP.SCNode=HRMS&EOPP.SCPortal=EMPLOYEE&EOPP.SCName=CO_EMPLOYEE_SELF_SERVICE&EOPP.SCLabel=Self%20Service&EOPP.SCPTfname=CO_EMPLOYEE_SELF_SERVICE&FolderPath=PORTAL_ROOT_OBJECT.CO_EMPLOYEE_SELF_SERVICE.HCCC_ENROLLMENT.HC_SSR_SSENRL_LIST&IsFolder=false"));
+        startActivity(intent);
+    }
+    public void godark(View view1)
+    {
+        view.setBackgroundResource(R.color.dark);
+    }
+    public void gowhite(View view2)
+    {
+        view.setBackgroundResource(R.color.white);
+    }
+
 }
+

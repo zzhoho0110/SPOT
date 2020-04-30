@@ -13,9 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/send_message_layput"
+        android:layout_marginBottom="0dp"
         android:divider="@null"/>
 
-        <LinearLayout
+    <LinearLayout
             android:id="@+id/send_message_layput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -23,12 +24,31 @@
             android:layout_alignParentBottom="true"
             android:gravity="center_vertical">
 
-            <ImageView
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="changebackgroundcolor"
+            android:onClick="godark"
+            android:src="@drawable/bot1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="changebackgroundcolor"
+            android:onClick="gowhite"
+            android:src="@drawable/bot" />
+
+
+        <ImageView
                 android:id="@+id/imageView"
-                android:src="@drawable/bot"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:contentDescription="@string/todo" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:contentDescription="Lesson checking"
+                android:onClick="onClick"
+                android:src="@drawable/schedule" />
 
             <EditText
                 android:id="@+id/edtTextMsg"
@@ -37,6 +57,8 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:textColor="@color/colorAccent"
+                android:theme="@style/AppTheme"
                 android:autofillHints="" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -45,4 +67,5 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"/>
         </LinearLayout>
+
 </RelativeLayout>
